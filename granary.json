@@ -1,0 +1,53 @@
+{
+	"network": "sandboxnet",
+	"dockerNetworkName": "granary",
+	"data": {
+		"basePath": ".granary",
+		"networks": {
+			"sandboxnet": {
+				"name": "sandboxnet",
+				"subFolderName": "<data.networks.sandboxnet.name>",
+				"nodeFolder": "<data.basePath>/<data.networks.sandboxnet.subFolderName>/node",
+				"clientFolder": "<data.basePath>/<data.networks.sandboxnet.subFolderName>/client"
+			},
+			"alphanet": {
+				"name": "alphanet",
+				"subFolderName": "<data.networks.alphanet.name>",
+				"nodeFolder": "",
+				"clientFolder": "<data.basePath>/<data.networks.alphanet.subFolderName>/client"
+			}
+		}
+	},
+	"tezosClient": {
+		"networks": {
+			"sandboxnet": {
+				"dockerImage": "bakingbad/tezos-client-sandboxnet",
+				"nodeAddr": "<tezosNode.networks.sandboxnet.containerName>",
+				"nodeRpcPort": "<tezosNode.networks.sandboxnet.rpcPort>",
+				"baseDir": "<data.networks.sandboxnet.clientFolder>"
+			},
+			"alphanet": {
+				"dockerImage": "stovelabs/granary-tezos-client-alphanet",
+				"nodeAddr": "alphanet.tezrpc.me",
+				"nodeRpcPort": "443",
+				"baseDir": "<data.networks.alphanet.clientFolder>"
+			}
+		}
+	},
+	"tezosNode": {
+		"networks": {
+			"sandboxnet": {
+				"dockerImage": "bakingbad/tezos-node-sandboxnet",
+				"containerName": "granary-tezos-node-sandbox",
+				"rpcPort": "8732",
+				"dataDir": "<data.networks.sandboxnet.nodeFolder>"
+			},
+			"alphanet": {
+				"dockerImage": "",
+				"containerName": "",
+				"rpcPort": "",
+				"dataDir": ""
+			}
+		}
+	}
+}

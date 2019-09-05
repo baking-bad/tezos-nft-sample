@@ -1,0 +1,4 @@
+pytezos
+pytest
+ipython
+fire

@@ -1,0 +1,31 @@
+{
+  "name": "tezos-nft-sample",
+  "version": "1.0.0",
+  "description": "Sample application using NFT standard for Tezos",
+  "scripts": {
+    "activate-alpha": "make alpha",
+    "bake": "make block",
+    "compile": "make michelson",
+    "test": "make test",
+    "init": "granary init",
+    "start": "granary node start",
+    "stop": "granary node stop",
+    "clean": "granary node clean && granary client clean",
+    "reset": "npm run stop && npm run clean && npm run init && npm run start && npm run activate-alpha"
+  },
+  "keywords": [
+    "tezos",
+    "blockchain",
+    "dapp",
+    "smart",
+    "contract",
+    "granary",
+    "sandbox",
+    "nft"
+  ],
+  "author": "matej.sima@gmail.com, mz@baking-bad.org",
+  "license": "MIT",
+  "dependencies": {
+    "@stove-labs/granary": "^1.0.0-pre-alpha.29"
+  }
+}
