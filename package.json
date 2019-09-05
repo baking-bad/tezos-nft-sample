@@ -5,9 +5,10 @@
   "scripts": {
     "activate-alpha": "make alpha",
     "bake": "make block",
-    "compile": "make michelson",
+    "compile": "make compile",
     "test": "make test",
-    "init": "granary init",
+    "originate": "make origination && make block",
+    "init": "granary init && make version",
     "start": "granary node start",
     "stop": "granary node stop",
     "clean": "granary node clean && granary client clean",
