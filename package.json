@@ -11,7 +11,7 @@
     "init": "granary init && make version",
     "start": "granary node start",
     "stop": "granary node stop",
-    "clean": "granary node clean && granary client clean",
+    "clean": "granary node clean && granary client clean && make clear",
     "reset": "npm run stop && npm run clean && npm run init && npm run start && npm run activate-alpha"
   },
   "keywords": [

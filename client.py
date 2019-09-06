@@ -15,7 +15,7 @@ class TezosNftSamle:
         opg = pytezos.origination(script=app.script(original=False)).autofill().sign()
         contract_id = opg.result()[0].originated_contracts[0]
         opg.inject()
-        print(f'Successfully originated\nCheck out the contract at https://better-call.dev/sandbox/{contract_id}')    
+        print(f'Successfully originated {contract_id}\nCheck out the contract at https://better-call.dev/sandbox/{contract_id}')    
 
     def mint(self, contract_id, token_id, owner=None):
         if owner is None:
