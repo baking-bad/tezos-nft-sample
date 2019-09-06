@@ -24,6 +24,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/baking-bad/tezos-nft-sample
 cd tezos-nft-sample
 npm i
+pip install -r requirements.txt
 ```
 
 We need to initialize Granary settings before the first launch:
